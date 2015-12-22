@@ -17,35 +17,102 @@ LinkList create_node(int num)
     return p;
 }
 
-//create list
-LinkList create_list(int node_count)
+//create list,append the tail
+void create_list(LinkList *head,int node_count)
 {
     //init rand time
     srand((unsigned)time(0));
-    LinkList head,tail;
-    int i = 0;
     //头指针，指向一个结点
-    head = (LinkList)malloc(sizeof(Node));
-    head->num = rand() %100 + 1;
-    tail = head;
-    for(i=0; i<node_count; i++){
+    *head = (LinkList)malloc(sizeof(Node));
+    LinkList tail = *head;
+    tail->num = rand() %100 + 1;
+    for(int i=0; i<node_count-1; i++){
         int num = rand() % 100 + 1;
-        LinkList p = create_node(num);
+        LinkList p = (LinkList)malloc(sizeof(Node));
+        p->num = num;
         tail->next = p;
         tail = p;
     }
-    return head;
+}
+void create_list_head(LinkList *head, int node_count)
+{
+    //init rand time
+    srand((unsigned)time(0));
+    //头指针，指向一个结点
+    *head = (LinkList)malloc(sizeof(Node));
+    (*head)->num = rand() %100 + 1;
+
+    for(int i=0; i<node_count-1; i++){
+        int num = rand() % 100 + 1;
+        LinkList p = (LinkList)malloc(sizeof(Node));
+        p->num = num;
+        p->next = *head;
+        *head = p;
+        
+    }
 }
 
 //traverse the list,return the element count of the list
-int show_list(LinkList head)
+int show_list(LinkList *head)
 {
     int i=0;
-    LinkList p = head;
-    while (p->next != NULL) {
+    if (head == NULL) {
+        printf("遍历时，head 为空\n");
+    }
+    LinkList p = *head;
+    if (p==NULL) {
+        printf("遍历时p空\n");
+    }
+    
+    while (p!= NULL) {
         printf("num %d\n",p->num);
         i++;
         p = p->next;
     }
     return i;
 }
+
+//insert node
+void insert_node(int index, LinkList *head)
+{
+    LinkList p = *head;
+    LinkList prev = *head;
+    
+    LinkList node = (LinkList)malloc(sizeof(Node));
+    node->num = 111;
+    
+    int count = 0;
+    while (prev) {
+        if (count == index) {
+            if (index==0) {
+                node->next = (*head)->next;
+                *head = node;
+                return;
+            }else{
+                node->next = prev->next;
+                prev->next = node;
+                return;
+            }
+        }
+        if (!p) {
+            printf("index  = %d值超出链表边界\n",index);
+            return;
+        }
+        prev = p;
+        p=p->next;
+        count++;
+    }
+}
+
+//delete node
+void delete_node(int index, LinkList *head)
+{
+
+}
+
+
+
+
+
+
+

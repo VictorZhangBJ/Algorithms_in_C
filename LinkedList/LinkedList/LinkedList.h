@@ -22,9 +22,17 @@
 LinkList create_node(int num);
 
 //creat list
-LinkList create_list(int node_count);
+void create_list(LinkList *head,int node_count);
+
+void create_list_head(LinkList *head, int node_count);
 
 //traverse the list
-int show_list(LinkList head);
+int show_list(LinkList *head);
+
+//insert node
+void insert_node(int index, LinkList *head);
+
+//delete node
+void delete_node(int index, LinkList *head);
 
 #endif /* LinkedList_h */

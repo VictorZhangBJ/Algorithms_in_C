@@ -10,11 +10,12 @@
 #import "LinkedList.h"
 @implementation ViewController
 {
-    LinkList head;
+    LinkList *head;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
 
     // Do any additional setup after loading the view.
 }
@@ -22,13 +23,21 @@
     NSLog(@"创建链表");
     self.textView.textColor = [NSColor blackColor];
     [self.textView.textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:@"创建链表\n"]];
-    head = create_list(10);
+    head =(LinkList *)malloc(sizeof(LinkList *));
+    create_list_head(head, 5);
 }
 
 - (IBAction)showList:(id)sender {
     NSLog(@"遍历链表");
     int count = show_list(head);
-    printf("链表元素个数 = %d",count);
+    printf("链表元素个数 = %d\n",count);
+}
+- (IBAction)insertNode:(id)sender {
+    NSLog(@"插入元素");
+    insert_node(0, head);
+}
+
+- (IBAction)deleteNode:(id)sender {
 }
 
 - (void)setRepresentedObject:(id)representedObject {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C47a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -697,10 +697,10 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="495" height="243"/>
-                                            <size key="maxSize" width="495" height="10000000"/>
+                                            <size key="maxSize" width="512" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="495" height="243"/>
-                                            <size key="maxSize" width="495" height="10000000"/>
+                                            <size key="maxSize" width="512" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -727,16 +727,44 @@
                                     <action selector="showList:" target="XfG-lQ-9wD" id="9ij-WY-UIe"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b9e-xU-tbq">
+                                <rect key="frame" x="257" y="297" width="80" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="NnC-Cv-iBC"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundRect" title="插入元素" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eyq-h6-Qg9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="insertNode:" target="XfG-lQ-9wD" id="I1A-m5-FQ5"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sp0-30-YTc">
+                                <rect key="frame" x="371" y="297" width="80" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="删除元素" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="glE-zz-I77">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="deleteNode:" target="XfG-lQ-9wD" id="0rX-wz-AU5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="sp0-30-YTc" firstAttribute="baseline" secondItem="b9e-xU-tbq" secondAttribute="baseline" id="7yG-fs-hwg"/>
+                            <constraint firstAttribute="trailing" secondItem="sp0-30-YTc" secondAttribute="trailing" constant="61" id="IK9-zD-mym"/>
                             <constraint firstAttribute="trailing" secondItem="4Az-KS-dyt" secondAttribute="trailing" id="PdE-kL-aFx"/>
                             <constraint firstItem="JTw-Wj-Bkj" firstAttribute="baseline" secondItem="Pwz-Wm-30S" secondAttribute="baseline" id="Pdz-NB-4l4"/>
                             <constraint firstItem="JTw-Wj-Bkj" firstAttribute="leading" secondItem="Pwz-Wm-30S" secondAttribute="trailing" constant="35" id="Spa-Ml-iMx"/>
+                            <constraint firstItem="b9e-xU-tbq" firstAttribute="leading" secondItem="JTw-Wj-Bkj" secondAttribute="trailing" constant="42" id="Tb5-ok-5Uf"/>
                             <constraint firstItem="Pwz-Wm-30S" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="62" id="UBs-ft-C45"/>
                             <constraint firstItem="Pwz-Wm-30S" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ae7-OJ-jVX"/>
+                            <constraint firstItem="b9e-xU-tbq" firstAttribute="baseline" secondItem="JTw-Wj-Bkj" secondAttribute="baseline" id="baQ-lT-jMs"/>
                             <constraint firstItem="4Az-KS-dyt" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ecR-4H-yFd"/>
                             <constraint firstItem="4Az-KS-dyt" firstAttribute="top" secondItem="JTw-Wj-Bkj" secondAttribute="bottom" constant="53" id="igG-yi-VuJ"/>
                             <constraint firstAttribute="bottom" secondItem="4Az-KS-dyt" secondAttribute="bottom" id="var-DI-XAv"/>
+                            <constraint firstItem="sp0-30-YTc" firstAttribute="leading" secondItem="b9e-xU-tbq" secondAttribute="trailing" constant="34" id="yAd-4b-2uU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -745,7 +773,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="723"/>
+            <point key="canvasLocation" x="111" y="702"/>
         </scene>
     </scenes>
 </document>
