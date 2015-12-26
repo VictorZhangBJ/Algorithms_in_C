@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C47a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -673,19 +673,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="512" height="378"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pwz-Wm-30S">
-                                <rect key="frame" x="20" y="297" width="80" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="p8O-7w-x4N"/>
-                                </constraints>
-                                <buttonCell key="cell" type="roundRect" title="创建链表" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wyH-Qm-1BP">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                    <connections>
-                                        <action selector="createLinkList:" target="XfG-lQ-9wD" id="WDC-MU-q4p"/>
-                                    </connections>
-                                </buttonCell>
-                            </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Az-KS-dyt">
                                 <rect key="frame" x="0.0" y="0.0" width="512" height="245"/>
                                 <clipView key="contentView" id="dxI-Kn-KvP">
@@ -714,10 +701,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JTw-Wj-Bkj">
-                                <rect key="frame" x="135" y="297" width="80" height="19"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pwz-Wm-30S">
+                                <rect key="frame" x="20" y="339" width="80" height="19"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="cCn-y8-499"/>
+                                    <constraint firstAttribute="width" constant="80" id="Jus-Qi-LDb"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundRect" title="创建链表" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wyH-Qm-1BP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                    <connections>
+                                        <action selector="createLinkList:" target="XfG-lQ-9wD" id="WDC-MU-q4p"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JTw-Wj-Bkj">
+                                <rect key="frame" x="135" y="339" width="80" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="hYw-hw-BOo"/>
                                 </constraints>
                                 <buttonCell key="cell" type="roundRect" title="遍历链表" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tat-hB-OFH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -728,9 +728,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b9e-xU-tbq">
-                                <rect key="frame" x="257" y="297" width="80" height="19"/>
+                                <rect key="frame" x="257" y="339" width="80" height="19"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="NnC-Cv-iBC"/>
+                                    <constraint firstAttribute="width" constant="80" id="jMm-zm-TGj"/>
                                 </constraints>
                                 <buttonCell key="cell" type="roundRect" title="插入元素" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eyq-h6-Qg9">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -741,7 +741,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sp0-30-YTc">
-                                <rect key="frame" x="371" y="297" width="80" height="19"/>
+                                <rect key="frame" x="371" y="339" width="80" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="删除元素" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="glE-zz-I77">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -750,24 +750,50 @@
                                     <action selector="deleteNode:" target="XfG-lQ-9wD" id="0rX-wz-AU5"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-BE-v5c">
+                                <rect key="frame" x="249" y="293" width="96" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="2qu-sq-Ize"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="插入位置" bezelStyle="round" id="Och-ir-FLY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="G0e-bP-fuN">
+                                <rect key="frame" x="371" y="292" width="96" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="删除位置" bezelStyle="round" id="Nlx-R5-wPw">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="sp0-30-YTc" firstAttribute="baseline" secondItem="b9e-xU-tbq" secondAttribute="baseline" id="7yG-fs-hwg"/>
-                            <constraint firstAttribute="trailing" secondItem="sp0-30-YTc" secondAttribute="trailing" constant="61" id="IK9-zD-mym"/>
+                            <constraint firstAttribute="trailing" secondItem="G0e-bP-fuN" secondAttribute="trailing" constant="45" id="8Og-KO-Zax"/>
+                            <constraint firstItem="b9e-xU-tbq" firstAttribute="leading" secondItem="JTw-Wj-Bkj" secondAttribute="trailing" constant="42" id="9pS-qz-KAZ"/>
+                            <constraint firstItem="4Az-KS-dyt" firstAttribute="top" secondItem="Pwz-Wm-30S" secondAttribute="bottom" constant="95" id="As8-ro-2kd"/>
+                            <constraint firstItem="sp0-30-YTc" firstAttribute="leading" secondItem="b9e-xU-tbq" secondAttribute="trailing" constant="34" id="Awj-xx-CTf"/>
+                            <constraint firstAttribute="trailing" secondItem="sp0-30-YTc" secondAttribute="trailing" constant="61" id="DYT-oi-cM2"/>
+                            <constraint firstItem="JTw-Wj-Bkj" firstAttribute="leading" secondItem="Pwz-Wm-30S" secondAttribute="trailing" constant="35" id="ICd-wT-dFx"/>
+                            <constraint firstItem="Pwz-Wm-30S" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Kgx-3p-wxY"/>
                             <constraint firstAttribute="trailing" secondItem="4Az-KS-dyt" secondAttribute="trailing" id="PdE-kL-aFx"/>
-                            <constraint firstItem="JTw-Wj-Bkj" firstAttribute="baseline" secondItem="Pwz-Wm-30S" secondAttribute="baseline" id="Pdz-NB-4l4"/>
-                            <constraint firstItem="JTw-Wj-Bkj" firstAttribute="leading" secondItem="Pwz-Wm-30S" secondAttribute="trailing" constant="35" id="Spa-Ml-iMx"/>
-                            <constraint firstItem="b9e-xU-tbq" firstAttribute="leading" secondItem="JTw-Wj-Bkj" secondAttribute="trailing" constant="42" id="Tb5-ok-5Uf"/>
-                            <constraint firstItem="Pwz-Wm-30S" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="62" id="UBs-ft-C45"/>
-                            <constraint firstItem="Pwz-Wm-30S" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ae7-OJ-jVX"/>
-                            <constraint firstItem="b9e-xU-tbq" firstAttribute="baseline" secondItem="JTw-Wj-Bkj" secondAttribute="baseline" id="baQ-lT-jMs"/>
+                            <constraint firstItem="sp0-30-YTc" firstAttribute="baseline" secondItem="b9e-xU-tbq" secondAttribute="baseline" id="RGS-vq-E6e"/>
+                            <constraint firstItem="G0e-bP-fuN" firstAttribute="top" secondItem="sp0-30-YTc" secondAttribute="bottom" constant="26" id="d2e-E3-oLA"/>
+                            <constraint firstItem="Pwz-Wm-30S" firstAttribute="baseline" secondItem="JTw-Wj-Bkj" secondAttribute="baseline" id="dTX-2j-RbQ"/>
                             <constraint firstItem="4Az-KS-dyt" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ecR-4H-yFd"/>
-                            <constraint firstItem="4Az-KS-dyt" firstAttribute="top" secondItem="JTw-Wj-Bkj" secondAttribute="bottom" constant="53" id="igG-yi-VuJ"/>
+                            <constraint firstItem="G0e-bP-fuN" firstAttribute="leading" secondItem="sp0-30-YTc" secondAttribute="leading" id="fLX-lC-UWR"/>
+                            <constraint firstItem="Pwz-Wm-30S" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="je8-3D-IS3"/>
+                            <constraint firstItem="5ny-BE-v5c" firstAttribute="centerX" secondItem="b9e-xU-tbq" secondAttribute="centerX" id="jxX-DP-Ir4"/>
                             <constraint firstAttribute="bottom" secondItem="4Az-KS-dyt" secondAttribute="bottom" id="var-DI-XAv"/>
-                            <constraint firstItem="sp0-30-YTc" firstAttribute="leading" secondItem="b9e-xU-tbq" secondAttribute="trailing" constant="34" id="yAd-4b-2uU"/>
+                            <constraint firstItem="5ny-BE-v5c" firstAttribute="top" secondItem="b9e-xU-tbq" secondAttribute="bottom" constant="25" id="xjy-Qe-dYm"/>
+                            <constraint firstItem="b9e-xU-tbq" firstAttribute="baseline" secondItem="JTw-Wj-Bkj" secondAttribute="baseline" id="zqc-8H-mA6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteTF" destination="G0e-bP-fuN" id="pfK-Gl-tCc"/>
+                        <outlet property="insertTF" destination="5ny-BE-v5c" id="QbX-5i-1Ex"/>
                         <outlet property="textView" destination="j0P-7R-vyd" id="ohD-0h-bSy"/>
                     </connections>
                 </viewController>

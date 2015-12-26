@@ -107,7 +107,28 @@ void insert_node(int index, LinkList *head)
 //delete node
 void delete_node(int index, LinkList *head)
 {
-
+    LinkList p = *head;
+    LinkList prev = p;
+    int i = 0;
+    while (p) {
+        if (i==index) {
+            if (index == 0) {
+                *head = p->next;
+                free(p);
+                printf("删除成功\n");
+                return;
+            }else{
+                prev->next = p->next;
+                free(p);
+                printf("删除成功\n");
+                return;
+            }
+        }
+        prev = p;
+        p= p->next;
+        i++;
+    }
+    printf("删除的index = %d 越界！\n",index);
 }
 
 

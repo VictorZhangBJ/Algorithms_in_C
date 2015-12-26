@@ -33,11 +33,14 @@
     printf("链表元素个数 = %d\n",count);
 }
 - (IBAction)insertNode:(id)sender {
-    NSLog(@"插入元素");
-    insert_node(0, head);
+    int index = self.insertTF.intValue;
+    NSLog(@"插入元素 位置 index  = %d",index);
+    insert_node(index, head);
 }
 
 - (IBAction)deleteNode:(id)sender {
+    int index = self.deleteTF.intValue;
+    delete_node(index, head);
 }
 
 - (void)setRepresentedObject:(id)representedObject {
